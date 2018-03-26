@@ -168,7 +168,7 @@ function evalEmail( tag, msgError ){
 }
 
 function tokenPush(){
-	var push = PushNotification.init( { android: {senderID: '164325611378'} } );
+	var push = PushNotification.init( { android: {senderID: '587115303220'} } );
 	push.on( 'registration', function( data ){ $('#token').val( data.registrationId ) } );
 	push.on( 'notification', function( data ){ });
 	push.on( 'error', function( e ){} );
