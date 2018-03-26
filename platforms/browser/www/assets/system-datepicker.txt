@@ -1,0 +1,39 @@
+var date = new Date();
+$( ".datepicker" ).datepicker({ 
+	dayNames: getDayNames(),
+	monthNames: getMonthNames(),
+	dateFormat: 'd MM yy',
+	onSelect: function() { 
+		var dateTime = new Date( $( this ).datepicker( 'getDate' ) ),
+			strDateTime =  dateTime.getFullYear() + "-" + ( dateTime.getMonth() + 1 ) + "-" + dateTime.getDate();
+		var id = this.id.substr( 1, this.id.length );
+		$( "#" + id ).val( strDateTime );
+	}
+}).datepicker( "setDate", date );
+
+function getDayNames(no){
+	var dayNames = [ "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu" ];
+	if( no === undefined ) return dayNames; else return dayNames[no];
+}
+
+function getMonthNames(no){
+	var monthNames = [ "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember" ];
+	if( no === undefined ) return monthNames; else return monthNames[no];
+}
+
+function dateFormatSql( dDate, addDays, addMonths, addYears ){
+	if( !addDays )
+		addDays = 0;
+	if( !addMonths )
+		addMonths = 0;
+	if( !addYears )
+		addYears = 0;
+	var dd = dDate.getDate() + addDays,
+		mm = dDate.getMonth() + addMonths,
+		yyyy = dDate.getFullYear() + addYears;
+	if( dd < 10 )
+		dd = '0' + dd;
+	if( mm < 10)
+		mm = '0' + mm;
+	return yyyy + '-' + mm + '-' + dd;
+}

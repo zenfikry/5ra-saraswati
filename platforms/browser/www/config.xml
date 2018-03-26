@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="1" id="com.lpt5ra.saraswati" version="1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <feature name="Camera">
+        <param name="browser-package" value="Camera" />
+    </feature>
+    <name>5RA Saraswati</name>
+    <description />
+    <author>MOC Corp</author>
+    <content src="index.html" />
+    <icon density="ldpi" height="36" platform="android" src="package-assets/android-icon-36x36.png" width="36" />
+    <icon density="mdpi" height="48" platform="android" src="package-assets/android-icon-48x48.png" width="48" />
+    <icon density="hdpi" height="72" platform="android" src="package-assets/android-icon-72x72.png" width="72" />
+    <icon density="xhdpi" height="96" platform="android" src="package-assets/android-icon-96x96.png" width="96" />
+    <config-file mode="merge" parent="/manifest/application" platform="android">
+        <activity android:launchMode="singleTop" />
+    </config-file>
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="phonegap-version" value="cli-6.2.0" />
+    <preference name="xwalkMultipleApk" value="false" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect --ignore-gpu-blacklist " />
+</widget>
