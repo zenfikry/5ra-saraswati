@@ -39,6 +39,9 @@
         },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.lpt5ra.saraswati"
+        },
+        "phonegap-plugin-push": {
+            "PACKAGE_NAME": "com.lpt5ra.saraswati"
         }
     },
     "dependent_plugins": {}
